@@ -7,6 +7,7 @@ data_full$Date <- as.Date(data_full$Date, format="%d/%m/%Y")
 data <- subset(data_full, subset=(Date >= "2007-02-01" & Date <= "2007-02-02"))
 rm(data_full)
 
+
 ## Converting dates
 datetime <- paste(as.Date(data$Date), data$Time)
 data$Datetime <- as.POSIXct(datetime)
